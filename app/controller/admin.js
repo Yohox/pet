@@ -7,7 +7,16 @@ class AdminController extends Controller {
     this.ctx.body = 'hi, egg';
   }
   async login() {
-    this.ctx.body = 'new!';
+    this.ctx.body = {
+      status:'ok',
+      currentAuthority:'admin'
+    };
+  }
+  async currentUser() {
+    this.ctx.body = {
+      name: '庄总',
+      userid: '1'
+    }
   }
 }
 
